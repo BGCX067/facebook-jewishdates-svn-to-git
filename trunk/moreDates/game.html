@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<style>
+			.td {
+				width:100px;
+				height:100px;
+				float:left;
+				font: 72px "Arial Rounded MT Bold" ;
+				border: #ffeebb 2px solid;
+				text-align: center;
+			}
+			#board {
+				width:330px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="board" onclick="">
+			<div>
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+			<div>
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+			<div>
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	function $(str)
+	{
+		return document.getElementById(str);
+	}
+	turn = "X";
+	$("board").onclick = function(event){
+		x=event.target;
+		if (x.className == "td" && x.innerHTML == "")
+		{
+			turn = (turn == "X") ? "O" : "X";
+			x.innerHTML = turn;
+		}
+	}
+	function 
+</script>
